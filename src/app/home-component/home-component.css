@@ -11,7 +11,7 @@ body {
 }
 
 /* Container principal */
-.container {
+.container_img-cadre {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -22,7 +22,7 @@ body {
 }
 
 /* Images de décoration - cadre et ellipse */
-.cadre {
+.container_img-cadre {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,7 +34,7 @@ body {
   pointer-events: none;
 }
 
-.ellipse {
+.container_img-ellipse {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,7 +47,7 @@ body {
 }
 
 /* Photo de profil */
-.sarytapaka {
+.container_img-sarytapaka {
   width: 280px;
   height: 280px;
   border-radius: 50%;
@@ -60,7 +60,7 @@ body {
 }
 
 /* Balises de code décorative */
-.baliseOuvert {
+.container_img-baliseOuvert {
   position: absolute;
   left: 5%;
   top: 20%;
@@ -69,7 +69,7 @@ body {
   z-index: 0;
 }
 
-.baliseFerme {
+.container_img-baliseFerme {
   position: absolute;
   right: 5%;
   bottom: 25%;
@@ -79,7 +79,7 @@ body {
 }
 
 /* Section intro */
-.intro {
+.container_intro {
   text-align: center;
   max-width: 600px;
   position: relative;
@@ -87,7 +87,7 @@ body {
   margin-bottom: 60px;
 }
 
-.nom {
+.container_intro-nom {
   font-size: 16px;
   color: rgba(217, 217, 217, 1);
   margin-bottom: 10px;
@@ -96,7 +96,7 @@ body {
   font-weight: 300;
 }
 
-.intro h2 {
+.container_intro-titre {
   font-size: 48px;
   font-weight: 700;
   margin: 15px 0 25px 0;
@@ -104,7 +104,7 @@ body {
   letter-spacing: -1px;
 }
 
-.presentetion {
+.container_intro-presentetion {
   font-size: 16px;
   line-height: 1.7;
   color: rgba(217, 217, 217, 1);
@@ -115,7 +115,7 @@ body {
 }
 
 /* Bouton Say hi */
-.intro button {
+.container_btn-say {
   background: linear-gradient(135deg, rgba(77, 25, 77, 1) 0%, #FFFFFF 100%);
   color: white;
   border: none;
@@ -129,12 +129,12 @@ body {
   text-transform: capitalize;
 }
 
-.intro button:hover {
+.container_btn-say:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
 }
 
-.intro button:active {
+.container_btn-say:active {
   transform: translateY(-1px);
 }
 
@@ -166,7 +166,7 @@ body {
   background: rgba(27, 58, 75, 1);
 }
 
-.navbar a.home {
+.navbar navbar-home {
   background: white;
   color: #1a1a2e;
   font-weight: 600;
@@ -254,5 +254,6 @@ body {
     font-size: 14px;
   }
 }
+
 
 
