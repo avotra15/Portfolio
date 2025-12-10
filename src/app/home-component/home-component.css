@@ -21,7 +21,7 @@ body {
 }
 
 /* Images de décoration - cadre et ellipse */
-img[alt="cadre"] {
+.cadre {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,7 +33,7 @@ img[alt="cadre"] {
   pointer-events: none;
 }
 
-img[alt="ellipse"] {
+.ellipse {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,7 +46,7 @@ img[alt="ellipse"] {
 }
 
 /* Photo de profil */
-img[alt="sarytapaka"] {
+.sarytapaka {
   width: 280px;
   height: 280px;
   border-radius: 50%;
@@ -59,7 +59,7 @@ img[alt="sarytapaka"] {
 }
 
 /* Balises de code décorative */
-img[alt="baliseOuvert"] {
+.baliseOuvert {
   position: absolute;
   left: 5%;
   top: 20%;
@@ -68,7 +68,7 @@ img[alt="baliseOuvert"] {
   z-index: 0;
 }
 
-img[alt="baliseFerme"] {
+.baliseFerme {
   position: absolute;
   right: 5%;
   bottom: 25%;
@@ -200,13 +200,13 @@ img[alt="baliseFerme"] {
 
 /* Responsive */
 @media (max-width: 768px) {
-  img[alt="cadre"],
-  img[alt="ellipse"] {
+  .cadre,
+  .ellipse {
     width: 300px;
     height: 300px;
   }
 
-  img[alt="sarytapaka"] {
+  .sarytapaka {
     width: 200px;
     height: 200px;
   }
@@ -229,8 +229,8 @@ img[alt="baliseFerme"] {
     font-size: 14px;
   }
 
-  img[alt="baliseOuvert"],
-  img[alt="baliseFerme"] {
+  .baliseOuvert,
+  .baliseFerme {
     width: 50px;
   }
 
@@ -253,3 +253,4 @@ img[alt="baliseFerme"] {
     font-size: 14px;
   }
 }
+
