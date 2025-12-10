@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   position: relative;
   overflow-x: hidden;
@@ -88,7 +89,7 @@ body {
 
 .nom {
   font-size: 16px;
-  color: #a8b2d1;
+  color: rgba(217, 217, 217, 1);
   margin-bottom: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -99,14 +100,14 @@ body {
   font-size: 48px;
   font-weight: 700;
   margin: 15px 0 25px 0;
-  color: #ffffff;
+  color: rgba(222, 222, 222, 1);
   letter-spacing: -1px;
 }
 
 .presentetion {
   font-size: 16px;
   line-height: 1.7;
-  color: #a8b2d1;
+  color: rgba(217, 217, 217, 1);
   margin-bottom: 30px;
   max-width: 500px;
   margin-left: auto;
@@ -115,7 +116,7 @@ body {
 
 /* Bouton Say hi */
 .intro button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgba(77, 25, 77, 1) 0%, #FFFFFF 100%);
   color: white;
   border: none;
   padding: 15px 50px;
@@ -162,7 +163,7 @@ body {
 
 .navbar a:hover {
   color: white;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(27, 58, 75, 1);
 }
 
 .navbar a.home {
@@ -253,4 +254,5 @@ body {
     font-size: 14px;
   }
 }
+
 
