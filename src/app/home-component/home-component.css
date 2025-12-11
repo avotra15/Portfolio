@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Container principal */
+.container_img-cadre {
+  position: absolute;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+  top: 10px;
+}
+
+/* Images de décoration - cadre et ellipse */
+.container_img-cadre {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container_img-ellipse {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Photo de profil */
+.container_img-sarytapaka {
+  position: absolute;
+  top: 16%;
+  left: 42%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Balises de code décorative */
+.container_img-baliseOuvert {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  width: 80px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.container_img-baliseFerme {
+  position: absolute;
+  right: 5%;
+  bottom: 25%;
+  width: 80px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Section intro */
+.container_intro {
+  text-align: left;
+  /*max-width: 700px;*/
+  position: absolute;
+  z-index: 2;
+  margin-top: 400px;
+  margin-left: 220px;
+}
+
+.container_intro-titre {
+  font-family: 'Alice', sans-serif;
+  font-size: 15px;
+  color: rgba(217, 217, 217, 1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.container_intro-nom {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 15px 0 25px 0;
+  color: rgba(222, 222, 222, 1);
+  letter-spacing: -1px;
+}
+
+.container_intro-presentetion {
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgba(217, 217, 217, 1);
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+/* Bouton Say hi */
+.container_btn-say {
+  background: rgba(77, 25, 77, 1);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 70;
+  transition: all 0.3s ease;
+  /*text-transform: inherit;*/
+}
+
+.container_btn-say:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+}
+
+.container_btn-say:active {
+  transform: translateY(-1px);
+}
+
+/* Navigation */
+.navbar {
+  position: absolute;
+  display: flex;
+  background: rgba(217, 217, 217, 1);
+  border-radius: 20px;
+  padding: 8px;
+  gap: 50px;
+  z-index: 3;
+  margin-top: 750px;
+  margin-left: 400px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #a8b2d1;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  color: rgba(217, 217, 217, 1);
+  background: rgba(27, 58, 75, 1);
+  margin: 3px 10px;
+}
+
+/* Icônes sociales (si vous les ajoutez) */
+.social-icons {
+  position: absolute;
+  left: 40px;
+  top: 105%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a8b2d1;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cadre,
+  .ellipse {
+    width: 300px;
+    height: 300px;
+  }
+
+  .sarytapaka {
+    width: 200px;
+    height: 200px;
+  }
+
+  .intro h2 {
+    font-size: 36px;
+  }
+
+  .presentetion {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .baliseOuvert,
+  .baliseFerme {
+    width: 50px;
+  }
+
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h2 {
+    font-size: 28px;
+  }
+
+  .intro button {
+    padding: 12px 35px;
+    font-size: 14px;
+  }
+}

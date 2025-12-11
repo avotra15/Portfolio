@@ -1,22 +1,31 @@
-<img [src]="'assets/images/cadre.png'" alt="cadre">
-<img [src]="'assets/images/ellipse.png'" alt="ellipse">
-<img [src]="'assets/images/sarytapaka.jpg'" alt="sarytapaka">
+<div class = "container">
+  <img [src]="'assets/images/cadre.png'" alt="cadre" class="container_img-cadre">
+  <img [src]="'assets/images/ellipse.png'" alt="ellipse" class="container_img-ellipse">
+  <img [src]="'assets/images/sarytapaka.jpg'" alt="sarytapaka" class="container_img-sarytapaka">
+  
+  <img [src]="'assets/images/baliseOuvert.png'" alt="baliseOuvert" class="container_img-baliseOuvert">
+  <img [src]="'assets/images/baliseFerme.png'" alt="baliseFerme" class="container_img-baliseOuvert">
+  
+  <div class="container_intro">
+      <div class="container_intro-titre">HI , My Name is</div>
+      <h2 class="container_intro-nom">Avotra Stanislas</h2>
+      <div class="container_intro-presentetion">
+          I'm a full stack developer, preferring to work with MERN stack (Symfony, Angular.js, PHP), with a great understanding of Javascrip and POO
+      </div>
+      <button class="container_btn-say">Say hi</button>
+  </div>
 
-<img [src]="'assets/images/baliseOuvert.png'" alt="baliseOuvert">
-<img [src]="'assets/images/baliseFerme.png'" alt="baliseFerme">
+  <div class="social-icons">
+    <img [src]="'assets/images/icons/instagram.svg'" alt="instagram" class="social-icons-instagram">
+    <img [src]="'assets/images/icons/linkedin.svg'" alt="linkedin" class="social-icons-linkedin">
+    <img [src]="'assets/images/icons/github.svg'" alt="github" class="social-icons-github">
+    <img [src]="'assets/images/icons/gitlab.svg'" alt="gitlab" class="social-icons-gitlab">
+  </div>
 
-<div class="intro">
-    <div class="nom">HI , My Name is</div>
-    <h2>Avotra Stanislas</h2>
-    <div class="presentetion">
-        I'm a full stack developer, preferring to work with MERN stack (Symfony, Angular.js, PHP), with a great understanding of Javascrip and POO
-    </div>
-    <button>Say hi</button>
-</div>
-
-<div class="navbar">
-    <a href="home" class="home">Home</a>
-    <a href="about" class="about">About</a>
-    <a href="portfolio" class="portfolio">Portfolio</a>
-    <a href="contact" class="contact">Contact</a>
+  <div class="navbar">
+      <a href="home" class="navbar-home">Home</a>
+      <a href="about" class="navbar-about">About</a>
+      <a href="portfolio" class="navbar-portfolio">Portfolio</a>
+      <a href="contact" class="navbar-contact">Contact</a>
+  </div>
 </div>
