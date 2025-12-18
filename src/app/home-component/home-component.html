@@ -3,7 +3,7 @@
   <img [src]="'assets/images/ellipse.png'" alt="ellipse" class="container_img-ellipse">
   <img [src]="'assets/images/sarytapaka.jpg'" alt="sarytapaka" class="container_img-sarytapaka">
   
-  <img [src]="'assets/images/baliseOuvert.png'" alt="baliseOuvert" class="container_img-baliseOuvert">
+  <!-- <img [src]="'assets/images/baliseOuvert.png'" alt="baliseOuvert" class="container_img-baliseOuvert"> -->
   <img [src]="'assets/images/baliseFerme.png'" alt="baliseFerme" class="container_img-baliseOuvert">
   
   <div class="container_intro">
@@ -15,17 +15,7 @@
       <button class="container_btn-say">Say hi</button>
   </div>
 
-  <div class="social-icons">
-    <img [src]="'assets/images/icons/instagram.svg'" alt="instagram" class="social-icons-instagram">
-    <img [src]="'assets/images/icons/linkedin.svg'" alt="linkedin" class="social-icons-linkedin">
-    <img [src]="'assets/images/icons/github.svg'" alt="github" class="social-icons-github">
-    <img [src]="'assets/images/icons/gitlab.svg'" alt="gitlab" class="social-icons-gitlab">
-  </div>
+  <app-social-link></app-social-link>
 
-  <div class="navbar">
-      <a href="home" class="navbar-home">Home</a>
-      <a href="about" class="navbar-about">About</a>
-      <a href="portfolio" class="navbar-portfolio">Portfolio</a>
-      <a href="contact" class="navbar-contact">Contact</a>
-  </div>
+  <app-navbar class="navbar"></app-navbar>
 </div>

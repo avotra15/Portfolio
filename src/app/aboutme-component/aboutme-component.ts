@@ -3,11 +3,11 @@ import { SocialLink } from '../social-link/social-link';
 import { Navbar } from '../navbar/navbar';
 
 @Component({
-  selector: 'app-home-component',
+  selector: 'app-aboutme-component',
   imports: [SocialLink, Navbar],
-  templateUrl: './home-component.html',
-  styleUrl: './home-component.css',
+  templateUrl: './aboutme-component.html',
+  styleUrl: './aboutme-component.css',
 })
-export class HomeComponent {
+export class AboutmeComponent {
 
 }

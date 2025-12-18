@@ -1,0 +1,27 @@
+/* Navigation */
+.navbar {
+  position: absolute;
+  display: flex;
+  background: rgba(217, 217, 217, 1);
+  border-radius: 20px;
+  padding: 8px;
+  gap: 50px;
+  z-index: 3;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #a8b2d1;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  color: rgba(217, 217, 217, 1);
+  background: rgba(27, 58, 75, 1);
+  margin: 3px 10px;
+}
