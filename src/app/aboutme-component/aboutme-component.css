@@ -1,138 +1,164 @@
-/* Navigation */
-.navbar {
-  position: absolute;
+/* Main Section Container */
+.section {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a7b 100%);
+  min-height: 100vh;
+  padding: 80px 40px;
   display: flex;
-  margin-bottom: 750px;
-  margin-left: 400px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Description Container */
+.descript {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* About Me Heading */
+.about {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: white;
+  font-family: 'Crimson Text', serif;
+}
+
+/* Profile Image */
+.descript img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Content */
+.descript > p,
+.descript > div:not(.groupe77) {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Information Group */
+.groupe77 {
+  text-align: left;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px 0;
+}
+
+.groupe77 small {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* Download Button */
 .section-btn {
   background: rgba(20, 69, 82, 1);
   color: white;
   border: none;
-  padding: 10px 30px;
+  padding: 12px 35px;
   font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  border-radius: 15px;
+  font-size: 16px;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: 70;
+  font-weight: 500;
   transition: all 0.3s ease;
-  /*text-transform: inherit;*/
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .section-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(102, 234, 223, 0.6);
+  box-shadow: 0 6px 20px rgba(102, 234, 223, 0.4);
+  background: rgba(20, 69, 82, 0.9);
 }
 
 .section-btn:active {
   transform: translateY(-1px);
 }
 
-.about {
-  min-height: 100vh;
-  padding: 80px 60px;
+.donwload {
+  width: 18px;
+  height: 18px;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #1c2740, #0b1020);
-  color: #fff;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.about-container {
-  max-width: 1100px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 50px;
+/* Social Links */
+app-social-link {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  gap: 50px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
 }
 
-.about-left {
-  flex: 1;
-}
-
-.about-left h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about-left p {
-  font-size: 15px;
-  line-height: 1.7;
-  opacity: 0.9;
-}
-
-.about-right {
-  flex: 1;
-  display: flex;
-  gap: 25px;
-}
-
-.about-img img {
-  width: 200px;
-  height: 200px;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-.about-info p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.about-info button {
-  margin-top: 15px;
-  padding: 10px 18px;
-  border-radius: 25px;
-  border: none;
-  background: #6c7cff;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* responsive mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+  
   .about {
-    padding: 30px 15px;
+    font-size: 36px;
   }
-
-  .about-container {
-    flex-direction: column;
-    padding: 25px;
-    gap: 30px;
-  }
-
-  .about-left h2 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  .about-left p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .about-right {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-img img {
+  
+  .descript img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
   }
-
-  .about-info p {
-    font-size: 13px;
+  
+  .navbar {
+    top: 10px;
+    padding: 6px 10px;
   }
+  
+  app-social-link {
+    left: 15px;
+  }
+  
+  .groupe77 {
+    text-align: center;
+  }
+}
 
-  .about-info button {
-    width: 100%;
-    max-width: 220px;
+@media (max-width: 480px) {
+  .about {
+    font-size: 28px;
+  }
+  
+  .section-btn {
+    font-size: 14px;
+    padding: 10px 25px;
   }
 }
