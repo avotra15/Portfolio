@@ -9,5 +9,4 @@ import { Navbar } from '../navbar/navbar';
   styleUrl: './aboutme-component.css',
 })
 export class AboutmeComponent {
-
 }
