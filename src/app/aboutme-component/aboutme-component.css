@@ -46,15 +46,14 @@
   margin: 150px 20px;
 }
 
-/* descript-about Me Heading */
-.descript-about {
+/* About Me Heading */
+.about {
   font-size: 50px;
   font-weight: 60;
   margin-bottom: 30px;
   color: white;
   font-family: 'Inknut Antiqua', sans-serif;
 } 
-
 /* Conteneur flex pour aligner image et groupe77 */
 .descript > .section_descript-sarytapaka,
 .descript > .groupe77 {
@@ -71,18 +70,19 @@
 }
 
 .groupe77 small {
-  /*display: block;*/
-  font-size: 14px;
+  /*display: block.*/
+  font-size: 15px;
   margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .section_descript-sarytapaka
 {
   width: 200px;
   height: 200px;
   border-radius: 15px;
   object-fit: cover;
-  margin: 10px auto;
+  margin: 0px auto;
   display: block;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
