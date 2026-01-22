@@ -8,7 +8,7 @@
 
 /* Carte projet */
 .projet1 {
-    background: linear-gradient(135deg, #1a0a2e 0%, #2d1b3d 100%);
+    background: transparent;
     border-radius: 20px;
     padding: 2.5rem;
     width: 100%;
@@ -65,22 +65,22 @@
 
 /* Bouton Voir plus */
 .projet1-btn {
-    background: linear-gradient(90deg, #ff006e 0%, #ff4d94 100%);
+    background: transparent;
     color: white;
-    border: none;
+    border: 1px solid linear-gradient(0% #60A5FA 100% #856594);
     padding: 0.9rem 2.5rem;
     border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 530;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 0, 110, 0.4);
+    /*box-shadow: 0 4px 15px rgba(255, 0, 110, 0.4);*/
     text-transform: lowercase;
+    align-content: flex-end;
 }
 
 .projet1-btn:hover {
-    background: linear-gradient(90deg, #ff4d94 0%, #ff006e 100%);
-    box-shadow: 0 6px 20px rgba(255, 0, 110, 0.6);
+    box-shadow: 0 2px 5px rgba(96, 165, 250, 1);
     transform: translateY(-2px);
 }
 

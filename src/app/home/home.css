@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Imprima&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Imprima&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');*/
 .home {
     min-height: 100vh;
     padding: 2rem;
@@ -163,7 +163,7 @@
 
 .btn button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(96, 165, 250, 1);
+    box-shadow: 0 2px 5px rgba(96, 165, 250, 1);
 }
 
 .btn .view img {
