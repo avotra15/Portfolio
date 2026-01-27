@@ -37,10 +37,6 @@
           "configurations": {
             "production": {
               "budgets": [
-                {
-                },
-                {
-                }
               ],
               "outputHashing": "all"
             },
