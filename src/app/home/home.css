@@ -87,7 +87,7 @@
     position: absolute;
     bottom: 3.5rem;
     left: 1.2rem;
-    color: #5b9dd9;
+    color: #0a0a0b;
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -121,7 +121,7 @@
 }
 
 .home_aboutme-nom {
-    color: #60A5FA;
+    color: #0a0a0b;
     font-size: 2.2rem;
     font-weight: 500;
 }
@@ -131,7 +131,7 @@
     display: inline; /* force l'affichage inline */
 }
 .home_aboutme-text {
-    color: #a0aec0;
+    color: #000;
     font-size: 1.5rem;
     padding-top: 70px;
 }
@@ -147,7 +147,6 @@
 
 .btn button {
     padding: 0.8rem 3rem;
-    border: 1px solid linear-gradient(0% #60A5FA 100% #856594);
     border-radius: 20px;
     background: transparent;
     color: #fff;
@@ -177,7 +176,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: transparent;
-    border: 2px solid #4a505e;
+    border: 2px solid #000;
     padding: 1rem 2.3rem;
     padding-bottom: 2rem; /* Espace pour .prb2 */
     font-size: 0.9rem;
@@ -187,12 +186,11 @@
 }
 
 .prb1::before {
-    content: '"';
     position: absolute;
     top: -2px;
     left: 8px;
     font-size: 2.5rem;
-    color: #6b7280;
+    color: #000;
     line-height: 1;
     font-family: 'Fira Code', sans-serif;
 }
@@ -201,7 +199,7 @@
     position: absolute;
     bottom: 2.5rem; /* Ajusté pour être à l'intérieur de .prb1 */
     right: calc(50% - 205px); /* Aligné à droite dans la boîte */
-    color: #a0aec0;
+    color: #000;
     font-size: 0.85rem;
 }
 
@@ -248,19 +246,18 @@
 
     .btn {
         top: 55%;
-        right: 16%;
+        right: 18%;
         gap: 4rem;
     }
 
     .btn button {
         padding: 0.7rem 2.5rem;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .prb1 {
-        bottom: 6rem;
-        padding: 0.8rem 2.5rem;
-        padding-bottom: 1.8rem;
+        bottom: 5.2rem;
+        padding: 1rem 2.5rem;
         font-size: 0.85rem;
     }
 
@@ -271,8 +268,8 @@
     }
 
     .prb2 {
-        bottom: 6.5rem;
-        right: calc(50% - 180px);
+        bottom: 5.3rem;
+        right: calc(50% - 165px);
         font-size: 0.8rem;
     }
 }
