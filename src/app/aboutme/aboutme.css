@@ -1,0 +1,121 @@
+.aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background: linear-gradient(145deg, rgba(42, 42, 62, 0.95) 0%, rgba(28, 28, 42, 0.98) 100%);
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de grille décorative */
+.aboutme::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 36px),
+        repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 36px);
+    pointer-events: none;
+}
+
+.aboutmedescri {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #a8b2d1;
+    z-index: 1;
+}
+
+.aboutmedescri::first-line {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.aboutme_card {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.aboutme_card img[alt="profil"] {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Effet de masque pour enlever le fond */
+    mix-blend-mode: lighten;
+    filter: contrast(1.1) brightness(1.1);
+    /* Ombre portée */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.aboutme_card img[alt="github"],
+.aboutme_card img[alt="linkedin"] {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.aboutme_card img[alt="github"]:hover,
+.aboutme_card img[alt="linkedin"]:hover {
+    opacity: 1;
+}
+
+.home_card-fullname {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.aboutme_btn {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    z-index: 1;
+}
+
+.aboutme_btn button {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.aboutme_btn button:hover {
+    border-color: #4a9eff;
+    color: #4a9eff;
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aboutme {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .aboutme_card img[alt="profil"] {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .aboutme_btn {
+        position: static;
+        margin-top: 30px;
+    }
+}
