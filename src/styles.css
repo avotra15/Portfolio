@@ -8,5 +8,10 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(#AFB5C2 0%, #686C74 0%, #73777F 0%, #53565C 26%);
+    background: linear-gradient(#AFB5C2 0%, #DBDBDB 0%, #B0B5B3 0%, #706F6F 26%);
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 800px;
 }

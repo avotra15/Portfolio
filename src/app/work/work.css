@@ -8,7 +8,7 @@
 
 /* Carte projet */
 .projet1 {
-    background: linear-gradient(145deg, rgba(42, 42, 62, 0.95) 0%, rgba(28, 28, 42, 0.98) 100%);
+    background: linear-gradient(145deg, #706F6F 0%, #706F6F 100%);
     backdrop-filter: blur(10px);
     border-radius: 28px;
     margin-top: 40px;
@@ -41,10 +41,9 @@
 }
 
 .projet1:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 
-        0 35px 90px rgba(96, 165, 250, 0.35),
-        0 0 0 1px rgba(96, 165, 250, 0.15) inset;
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
 }
 
 /* Titre du projet */
@@ -88,7 +87,7 @@
 }
 /* Description */
 .projet1-desc {
-    color: rgba(255, 255, 255, 0.8);
+    color: #fff;
     font-size: 0.98rem;
     line-height: 1.65;
     margin-bottom: 1.2rem; /* Espace après la description */
@@ -131,7 +130,7 @@
     padding: 0.8rem 3rem;
     border-radius: 20px;
     background: transparent;
-    color: #fff;
+    color: #000;
     font-size: 1.8rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -146,7 +145,8 @@
 
 .projet1-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(96, 165, 250, 1);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
 }
 
 .projet1-btn:active {
