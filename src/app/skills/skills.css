@@ -1,0 +1,150 @@
+/* Section des compétences */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    max-width: 1366px;
+    margin: 0 auto;
+    min-height: 150px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style des icônes */
+.skills img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #1a202c;
+    padding: 18px;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+                inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+/* Effet hover */
+.skills img:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(66, 153, 225, 0.3);
+    border-color: #4299e1;
+    background-color: #2d3748;
+}
+
+/* Animation d'entrée */
+.skills img {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.skills img:nth-child(1) { animation-delay: 0.1s; }
+.skills img:nth-child(2) { animation-delay: 0.2s; }
+.skills img:nth-child(3) { animation-delay: 0.3s; }
+.skills img:nth-child(4) { animation-delay: 0.4s; }
+.skills img:nth-child(5) { animation-delay: 0.5s; }
+.skills img:nth-child(6) { animation-delay: 0.6s; }
+.skills img:nth-child(7) { animation-delay: 0.7s; }
+.skills img:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+/* Large Desktop - 1366px */
+@media (max-width: 1366px) {
+    .skills {
+        max-width: 100%;
+        gap: 25px;
+        padding: 35px 30px;
+    }
+    
+    .skills img {
+        width: 75px;
+        height: 75px;
+        padding: 16px;
+    }
+}
+
+/* Desktop - 1024px */
+@media (max-width: 1024px) {
+    .skills {
+        gap: 20px;
+        padding: 30px 25px;
+    }
+    
+    .skills img {
+        width: 70px;
+        height: 70px;
+        padding: 15px;
+    }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .skills {
+        gap: 18px;
+        padding: 25px 20px;
+    }
+    
+    .skills img {
+        width: 65px;
+        height: 65px;
+        padding: 14px;
+    }
+}
+
+/* Mobile Large - 640px */
+@media (max-width: 640px) {
+    .skills {
+        gap: 15px;
+        padding: 20px 15px;
+    }
+    
+    .skills img {
+        width: 60px;
+        height: 60px;
+        padding: 12px;
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    .skills {
+        gap: 12px;
+        padding: 20px 10px;
+    }
+    
+    .skills img {
+        width: 55px;
+        height: 55px;
+        padding: 11px;
+    }
+}
+
+/* Mobile Small - 320px */
+@media (max-width: 320px) {
+    .skills {
+        gap: 10px;
+        padding: 15px 8px;
+    }
+    
+    .skills img {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+}
