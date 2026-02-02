@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.css',
 })
 export class Home {
-
+  openPdf() {
+  window.open('assets/CV_Stanislas.pdf', '_blank');
+}
 }
