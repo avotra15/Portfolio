@@ -36,7 +36,11 @@
           },
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "budgets": [ 
+=======
+              "budgets": [
+>>>>>>> 857136e56e3abd812159069115ffcd36a60dcb7a
               ],
               "outputHashing": "all"
             },

@@ -10,13 +10,13 @@
     </div>
 
     <div class="home_aboutme">
-        <div class="home_aboutme-nom"><div class="stan">Stanislas </div>développeur passionné, spécialisé dans la création d’applications modernes et performantes.</div>
+        <div class="home_aboutme-nom"><h3 class="stan">Stanislas </h3>développeur passionné, spécialisé dans la création d’applications modernes et performantes.</div>
 
         <div class="home_aboutme-text">Des solutions rapides, responsives et créatives, alliant technologie et design.</div>
     </div>
 
     <div class="btn">
-        <button class="view"><img [src]="'/assets/icones/doc.svg'" alt="doc">View CV</button>
+        <button class="view" (click)="openPdf()" ><img [src]="'/assets/icones/doc.svg'" alt="doc">View CV</button>
         <button class="contact">Contact Me</button>
     </div>
 

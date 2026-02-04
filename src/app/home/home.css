@@ -35,8 +35,6 @@ body, html {
 .home_card img[alt="linkedin"] {
     position: absolute;
     display: inline-block;
-    width: 40px;
-    height: 36px;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 10;
@@ -46,17 +44,20 @@ body, html {
 .home_card img[alt="linkedin"]:hover {
     transform: scale(1.15) translateY(-2px);
     border-color: linear-gradient(0% #60A5FA 100% #856594);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .home_card img[alt="github"] {
     top: 1.2rem;
     left: 1.2rem;
+    width: 40px;
+    height: 36px;
 }
 
 .home_card img[alt="linkedin"] {
-    top: 1.2rem;
+    top: 0.6rem;
     left: 4rem;
+    width: 50px;
+    height: 55px;
 }
 
 /* Photo de profil */
