@@ -41,7 +41,7 @@ h1 {
 .aboutme_card {
     position: relative;
     z-index: 1;
-    text-align: center;
+    /*text-align: center;
     font-family: 'Fira Code', 'Courier New', monospace;
     /*margin: -35px -45px;*/
 }
