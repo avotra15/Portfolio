@@ -8,6 +8,9 @@ describe('App', () => {
       imports: [
         App,
       ],
+       providers: [
+        provideRouter([]) // ✅ Fournit Router + ActivatedRoute
+      ],
       schemas: [NO_ERRORS_SCHEMA] // Ignore les composants enfants comme app-navbar
     }).compileComponents();
   });
