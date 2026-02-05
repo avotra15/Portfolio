@@ -1,58 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #363232;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
 .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-titre {
+    font-size: 45px;
+    font-weight: 700;
+    color: #a855f7;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact_titre-titre2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #a855f7;
+    margin-bottom: 10px;
 }
 
 .contact-txt {
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #ABB2BF;
-    margin-bottom: 3rem;
-    max-width: 65%;
+    font-size: 16px;
     line-height: 1.6;
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+.contact_titre-titre3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #a855f7;
+    display: inline;
+}
+
+.contact-para {
+    display: inline;
+    font-size: 16px;
+    color: #d1d5db;
 }
 
 .contact-card {
-    background: transparent;
-    border: 1px solid #ABB2BF;
-    padding: 1.5rem 2rem;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    color: #fff;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px 12px;
+    margin: 15px 0 20px 0;
+    align-items: center;
 }
 
 .contact-card img {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.5rem;
-    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    justify-self: start;
 }
 
 .contact-card a {
-    color: #ABB2BF;
+    color: #ffffff;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-size: 16px;
+    justify-self: start;
 }
 
 .contact-card a:hover {
-    color: #fff;
+    color: #a855f7;
+}
+
+.contact-form {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #ffffff;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #a855f7;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #6b7280;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Bouton Envoyer */
+.contact-form::after {
+    content: 'Envoyer';
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    background-color: #a855f7;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form::after:hover {
+    background-color: #9333ea;
 }
 
 .contact-Copyright {
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ABB2BF;
-    text-align: center;
-    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-Copyright img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.contact-Copyright img:hover {
+    opacity: 0.7;
+}
+
+.contact-Copyright p {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-titre {
+        font-size: 36px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
 }
