@@ -8,7 +8,10 @@ describe('Navbar', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Navbar]
+      imports: [
+        Navbar,
+        RouterTestingModule 
+      ]
     })
     .compileComponents();
 
