@@ -1,17 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body, html {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: linear-gradient(#AFB5C2 0%, #DBDBDB 0%, #B0B5B3 0%, #706F6F 26%);
+
+html {
     scroll-behavior: smooth;
 }
 
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+      #AFB5C2 0%,
+      #DBDBDB 0%,
+      #B0B5B3 0%,
+      #706F6F 26%
+    );
+    overflow-x: hidden;   /* OK */
+    overflow-y: auto;     /* OK */
+}
+
 section {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 80px; /* pour navbar fixe */
 }

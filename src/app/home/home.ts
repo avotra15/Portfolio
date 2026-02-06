@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from "@angular/router";
+import { Aboutme } from "../aboutme/aboutme";
+import { Skills } from "../skills/skills";
+import { Work } from "../work/work";
+import { Contact } from "../contact/contact";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, RouterModule],
+  imports: [RouterLink, RouterModule, Aboutme, Skills, Work, Contact],
   templateUrl: './home.html',
   styleUrl: './home.css',
+  standalone: true,
 })
 export class Home {
   openPdf() {
