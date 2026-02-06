@@ -124,29 +124,19 @@
 /* Bouton Voir plus */
 .projet1-btn {
     padding: 0.8rem 3rem;
-    border-radius: 20px;
+    border-radius: 8px;
     background: transparent;
     color: #000;
     font-size: 1.8rem;
     cursor: pointer;
-    transition: all 0.3s;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-}
-
-.projet1-btn:hover::before {
-    left: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .projet1-btn:hover {
     transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
-}
-
-.projet1-btn:active {
-    transform: translateY(-1px);
 }
 
 /* Responsive */
@@ -158,8 +148,8 @@
     }
 
     .projet1 {
-        width: 420px;
-        height: 480px;
+        width: 430px;
+        height: 490px;
         margin-top: 30px;
         padding: 1.5rem 0;
     }
@@ -198,6 +188,7 @@
     .projet1-btn {
         padding: 0.85rem 2.5rem;
         font-size: 0.9rem;
+        font-weight: 600;
         margin: 0 1.8rem 0 auto;
     }
 }

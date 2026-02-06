@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         App,
+      ],
+       providers: [
+        RouterTestingModule // ✅ Fournit Router + ActivatedRoute
       ],
       schemas: [NO_ERRORS_SCHEMA] // Ignore les composants enfants comme app-navbar
     }).compileComponents();
