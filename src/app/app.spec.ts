@@ -8,6 +8,7 @@ describe('App', () => {
     await TestBed.configureTestingModule({
       imports: [
         App,
+        RouterTestingModule,
       ],
        providers: [
         RouterTestingModule // ✅ Fournit Router + ActivatedRoute
