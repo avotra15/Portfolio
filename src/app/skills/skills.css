@@ -64,8 +64,8 @@
 /* Responsive Design */
 @media (max-width: 1366px) {
     .skills {
-        /*max-width: 100%;*/
-        gap: 45px;
+        max-width: 100%;
+        gap: 35px;
         padding: 100px 320px;
     }
     

@@ -3,8 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 2rem;
-    min-height: 100vh;
+    padding: 60px 80px;
+    max-height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
 }
 
 /* Carte projet */
@@ -12,35 +13,19 @@
     background: linear-gradient(145deg, #706F6F 0%, #706F6F 100%);
     backdrop-filter: blur(10px);
     border-radius: 28px;
-    margin-top: 40px;
-    width: 500px;
-    height: 510px;
+    margin-top: 5px;
+    width: 400px;
+    height: 500px;
     box-shadow: 
         0 25px 70px rgba(0, 0, 0, 0.6),
         0 0 0 1px rgba(255, 255, 255, 0.08) inset;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
+    overflow: hidden;   
     display: flex;
     flex-direction: column;
     padding: 2rem 0; /* Padding égal en haut et en bas */
 }
-
-.projet1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.projet1:hover::before {
-    opacity: 1;
-}
-
 .projet1:hover {
     transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.2);
@@ -143,7 +128,7 @@
 /* Responsive */
 @media (max-width: 1366px) {
     .projets {
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0;
         justify-content:space-between;
     }
@@ -151,7 +136,7 @@
     .projet1 {
         width: 430px;
         height: 490px;
-        margin-top: 30px;
+        margin: 1px 2px;
         padding: 1.5rem 0;
     }
 

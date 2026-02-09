@@ -1,6 +1,5 @@
 .home {
-    min-height: 100vh;
-    padding: 2rem;
+    max-height: 100vh;
     font-family: 'Fira Code', 'Courier New', monospace;
     color: #fff;
     position: relative;
@@ -14,7 +13,7 @@
     background: linear-gradient(135deg, #1a1d23 0%, #0f1115 100%);
     border-radius: 35px;
     padding: 0;
-    margin: 4rem 0 0 3rem;
+    /*margin: 8rem 0 0 3rem;*/
     transform: perspective(1200px) rotateY(-10deg) rotateX(3deg);
     box-shadow: 
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -99,7 +98,7 @@
 /* Section About Me */
 .home_aboutme {
     position: absolute;
-    top: 35%;
+    top: 20%;
     right: 5%;
     transform: translateY(-50%);
     max-width: 900px;

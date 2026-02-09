@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -10,16 +9,12 @@ html {
 
 body {
     min-height: 100vh;
-    background: linear-gradient(
-      #AFB5C2 0%,
-      #DBDBDB 0%,
-      #B0B5B3 0%,
-      #706F6F 26%
-    );
+    background:  #706F6F;
     overflow-x: hidden;   /* OK */
     overflow-y: auto;     /* OK */
 }
 
 section {
     scroll-margin-top: 80px; /* pour navbar fixe */
+    padding-top: 80px; /* ajustez selon la hauteur de votre navbar */
 }

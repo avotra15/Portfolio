@@ -1,22 +1,23 @@
 /* Navbar */
 .navbar {
     display: flex;
-    gap: 3.5rem;
+    gap: 2rem;
     justify-content: flex-end;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 2.5rem;
+    background-color: #706F6F;
 }
 
 .navbar a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #fff;
+    color: #000;
     transform: translateY(-2px);
     cursor: pointer;
 }
