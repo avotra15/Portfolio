@@ -7,25 +7,12 @@
     color: #fff;
     position: relative;
     overflow: hidden;
-}
-
-/* Effet de grille décorative */
-.aboutme::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 36px),
-        repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 36px);
-    pointer-events: none;
+    background-color: #706F6F;
 }
 
 .aboutme_descri {
-    max-width: 600px;
-    font-size: 18px;
+    max-width: 800px;
+    font-size: 20px;
     line-height: 2;
     color: #fff;
     z-index: 1;
@@ -34,20 +21,17 @@
 
 h1 {
     color: #000;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .aboutme_card {
     position: relative;
     z-index: 1;
-    /*text-align: center;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    /*margin: -35px -45px;*/
 }
 
 .aboutme_card img[alt="profil2"] {
-    width: 580px;
-    height: 555px;
+    width: 750px;
+    height: 920px;
     margin: -40px -50px;
 }
 
@@ -77,6 +61,28 @@ h1 {
 }
 
 /* Responsive */
+@media (max-width: 1366px) {
+.aboutme_card img[alt="profil2"] {
+    width: 580px;
+    height: 555px;
+    margin: -40px -50px;
+}
+
+.aboutme_descri {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 2;
+    color: #fff;
+    z-index: 1;
+    margin: -35px -45px;
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+};
+
 @media (max-width: 768px) {
     .aboutme {
         flex-direction: column;
