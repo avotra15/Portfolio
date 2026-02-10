@@ -61,41 +61,70 @@ h1 {
 
 /* Responsive */
 @media (max-width: 1366px) {
-.aboutme_card img[alt="profil2"] {
-    width: 580px;
-    height: 555px;
-    margin: -40px -50px;
-}
+    .aboutme_card img[alt="profil2"] {
+        width: 580px;
+        height: 555px;
+        margin: -70px -100px;
+    }
 
-.aboutme_descri {
-    max-width: 600px;
-    font-size: 18px;
-    line-height: 2;
-    color: #fff;
-    z-index: 1;
-    margin: -35px -45px;
-}
+    .aboutme_descri {
+        max-width: 450px;
+        font-size: 16px;
+        line-height: 2;
+        color: #fff;
+        z-index: 1;
+        margin: -35px -45px;
+    }
 
-h1 {
-    padding-bottom: 10px;
+    h1 {
+        padding-bottom: 10px;
+    }
 }
-
-};
 
 @media (max-width: 768px) {
     .aboutme {
         flex-direction: column;
-        padding: 40px 20px;
+        padding: 60px 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutme_descri {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    h1 {
+        text-align: center;
+        padding-bottom: 5px;
     }
     
-    .aboutme_card img[alt="profil"] {
-        width: 250px;
-        height: 250px;
+    .aboutme_card {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
     }
     
+    .aboutme_card img[alt="profil2"] {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0;
+    }
+
     .aboutme_btn {
         position: static;
-        margin-top: 30px;
+        margin: 30px 0 0 0;
+        text-align: center;
+    }
+
+    .aboutme_btn button {
+        font-size: 16px;
+        padding: 12px 28px;
     }
 }
 

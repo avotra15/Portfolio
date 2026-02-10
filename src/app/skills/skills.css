@@ -66,7 +66,7 @@
     .skills {
         max-width: 100%;
         gap: 35px;
-        padding: 100px 320px;
+        padding: 120px 320px;
     }
     
     .skills img {
@@ -79,8 +79,11 @@
 /* Desktop - 1024px */
 @media (max-width: 1024px) {
     .skills {
-        gap: 20px;
-        padding: 30px 25px;
+        gap: 30px;
+        padding: 40px 20px;
+        justify-content: center;
+        max-width: 800px;
+        margin: 3rem auto 7rem auto;
     }
     
     .skills img {
@@ -90,58 +93,3 @@
     }
 }
 
-/* Tablet - 768px */
-@media (max-width: 768px) {
-    .skills {
-        gap: 18px;
-        padding: 25px 20px;
-    }
-    
-    .skills img {
-        width: 65px;
-        height: 65px;
-        padding: 14px;
-    }
-}
-
-/* Mobile Large - 640px */
-@media (max-width: 640px) {
-    .skills {
-        gap: 15px;
-        padding: 20px 15px;
-    }
-    
-    .skills img {
-        width: 60px;
-        height: 60px;
-        padding: 12px;
-    }
-}
-
-/* Mobile - 480px */
-@media (max-width: 480px) {
-    .skills {
-        gap: 12px;
-        padding: 20px 10px;
-    }
-    
-    .skills img {
-        width: 55px;
-        height: 55px;
-        padding: 11px;
-    }
-}
-
-/* Mobile Small - 320px */
-@media (max-width: 320px) {
-    .skills {
-        gap: 10px;
-        padding: 15px 8px;
-    }
-    
-    .skills img {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-    }
-}

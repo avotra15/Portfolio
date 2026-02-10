@@ -250,15 +250,26 @@
 
 @media (max-width: 1024px) {
     .home_card {
-        margin: 2rem auto;
+        margin: 0 auto;
         transform: none;
     }
     
+    .home_card {
+        width: 400px;
+        height: 200px;
+    }
+
+    .home_aboutme-text {
+        position: static;
+        transform: none;
+        margin: -2rem 0 1.5rem 0;
+        text-align: center;
+    }
     .home_aboutme,
     .btn {
         position: static;
         transform: none;
-        margin: 2rem auto;
+        margin: 1rem auto 1rem auto;
         text-align: center;
     }
     
@@ -266,10 +277,18 @@
         justify-content: center;
     }
     
-    .prb1, .prb2 {
+    .prb1 {
         position: static;
         transform: none;
-        margin: 2rem auto;
+        margin: 1rem auto;
         text-align: center;
     }
+
+    .prb2 {
+        position: static;
+        transform: none;
+        margin: -2.5rem auto;
+        text-align: center;
+    }
+    
 }
