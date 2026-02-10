@@ -10,8 +10,8 @@ html {
 body {
     min-height: 100vh;
     background:  #706F6F;
-    overflow-x: hidden;   /* OK */
-    overflow-y: auto;     /* OK */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 section {
