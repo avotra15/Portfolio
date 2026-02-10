@@ -2,7 +2,6 @@
     margin: 0;
     max-height: calc(100vh - 80px);
     min-height: calc(100vh - 80px);
-    background-color: #706F6F;
     padding: 80px 100px;
     display: flex;
     flex-direction: column;
@@ -15,14 +14,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     align-items: start;
-}
-
-.contact-titre {
-    font-size: 45px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 15px;
-    text-align: left;
 }
 
 .contact-info {
@@ -168,7 +159,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
     position: relative;
 }
 
@@ -198,29 +189,25 @@
 /* Responsive 1366px - Layout côte à côte */
 @media (max-width: 1366px) {
     .contact {
-        padding: 80px 60px;
+        padding: 0px 30px;
     }
 
     .contact-wrapper {
         gap: 60px;
     }
 
-    .contact-titre {
-        font-size: 50px;
-    }
-
     .contact_titre-titre2 {
-        font-size: 22px;
-        padding-bottom: 10px;
+        font-size: 25px;
+        padding-bottom: 20px;
     }
 
     .contact_titre-titre3, .contact-para {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .contact-txt {
-        font-size: 18px;
-        padding-bottom: 10px;
+        font-size: 20px;
+        padding-bottom: 20px;
     }
 
     .contact-card {
@@ -238,8 +225,8 @@
     }
 
     .contact-form {
-        padding: 35px;
-        gap: 18px;
+        padding: 25px;
+        gap: 8px;
     }
 
     .contact-form label {
@@ -249,18 +236,25 @@
     .contact-form input,
     .contact-form textarea {
         font-size: 16px;
-        padding: 16px 18px;
+        padding: 8px 10px;
     }
+
+    .contact-copyright img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-copyright p {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
 }
 
 /* Responsive Tablette */
 @media (max-width: 1024px) and (min-width: 769px) {
     .contact {
         padding: 70px 40px;
-    }
-    
-    .contact-titre {
-        font-size: 42px;
     }
 
     .contact-wrapper {
@@ -278,11 +272,6 @@
 
     .contact {
         padding: 50px 20px;
-    }
-
-    .contact-titre {
-        font-size: 36px;
-        margin-bottom: 25px;
     }
 
     .contact-wrapper {
@@ -316,10 +305,6 @@
 @media (max-width: 480px) {
     .contact {
         padding: 40px 16px;
-    }
-
-    .contact-titre {
-        font-size: 32px;
     }
 
     .contact-form {
