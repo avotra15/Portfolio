@@ -1,0 +1,294 @@
+.home {
+    max-height: 100vh;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    max-height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+}
+/* Card avec photo et icônes */
+.home_card {
+    position: relative;
+    width: 750px;
+    height: 500px;
+    background: linear-gradient(135deg, #1a1d23 0%, #0f1115 100%);
+    border-radius: 35px;
+    padding: 0;
+    /*margin: 8rem 0 0 3rem;*/
+    transform: perspective(1200px) rotateY(-10deg) rotateX(3deg);
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: rotate(-8deg);
+}
+
+.home_card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
+}
+/* Icônes GitHub et LinkedIn */
+.home_card img[alt="github"],
+.home_card img[alt="linkedin"] {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.home_card img[alt="github"]:hover,
+.home_card img[alt="linkedin"]:hover {
+    transform: scale(1.15) translateY(-2px);
+    border-color: linear-gradient(0% #60A5FA 100% #856594);
+}
+
+.home_card img[alt="github"] {
+    top: 1.2rem;
+    left: 1.2rem;
+    width: 40px;
+    height: 36px;
+}
+
+.home_card img[alt="linkedin"] {
+    top: 0.6rem;
+    left: 4rem;
+    width: 50px;
+    height: 55px;
+}
+
+/* Photo de profil */
+.home_card img[alt="profil"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 16px 16px 0;
+    z-index: 2;
+}
+
+/* Overlay sombre sur la photo pour plus de contraste */
+.home_card img[alt="profil"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3) 0%,
+        transparent 50%
+    );
+}
+/* Si vous voulez ajouter le nom directement dans .home_card */
+.home_card::after {
+    white-space: pre;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    color: #5b9dd9;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    z-index: 10;
+}
+
+/* Section About Me */
+.home_aboutme {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translateY(-50%);
+    max-width: 900px;
+}
+
+.home_aboutme-nom {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.stan {
+    color: #000;
+    display: inline; /* force l'affichage inline */
+}
+.home_aboutme-text {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 70px;
+}
+
+/* Boutons */
+.btn {
+    position: absolute;
+    top: 70%;
+    right: 25%;
+    display: flex;
+    gap: 5rem;
+}
+
+.btn button {
+    padding: 0.8rem 3rem;
+    border-radius: 20px;
+    background: transparent;
+    color: #000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.btn button:hover {
+    transform: translateY(-2px);
+}
+
+.btn .view img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Citation */
+.prb1 {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: 2px solid #000;
+    padding: 1rem 2.3rem;
+    padding-bottom: 2rem; /* Espace pour .prb2 */
+    font-size: 0.9rem;
+    color: #fff;
+    max-width: 450px;
+    width: 200%;
+}
+
+.prb1::before {
+    position: absolute;
+    top: -2px;
+    left: 8px;
+    font-size: 2.5rem;
+    color: #000;
+    line-height: 1;
+    font-family: 'Fira Code', sans-serif;
+}
+
+.prb2 {
+    position: absolute;
+    bottom: 2.5rem; /* Ajusté pour être à l'intérieur de .prb1 */
+    right: calc(50% - 205px); /* Aligné à droite dans la boîte */
+    color: #000;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1366px) {
+    .home {
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    .home_card {
+        width: 600px;
+        height: 300px;
+        margin: 1.8rem 0 0 2rem;
+        transform: rotate(-6deg);
+    }
+    .home_card::after {
+        font-size: 1.1rem;
+        bottom: 1.2rem;
+        left: 0.8rem;
+    }
+
+    .home_aboutme {
+        top: 18%;
+        right: 0.5%;
+        max-width: 650px;
+    }
+
+    .home_aboutme-nom {
+        font-size: 1.45rem;
+    }
+
+    .home_aboutme-text {
+        font-size: 1.3rem;
+        padding-top: 50px;
+    }
+
+    .btn {
+        top: 50%;
+        right: 18%;
+        gap: 4rem;
+    }
+
+    .btn button {
+        padding: 0.7rem 2.5rem;
+        font-size: 1.3rem;
+    }
+
+    .prb1 {
+        bottom: 8.5rem;
+        padding: 1rem 2.5rem;
+        font-size: 0.85rem;
+        padding-bottom: 1.8rem;
+    }
+
+    .prb2 {
+        bottom: 8rem;
+        right: calc(50% - 165px);
+        font-size: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home_card {
+        margin: 0 auto;
+        transform: none;
+    }
+    
+    .home_card {
+        width: 400px;
+        height: 200px;
+    }
+
+    .home_aboutme-text {
+        position: static;
+        transform: none;
+        margin: -2rem 0 1.5rem 0;
+        text-align: center;
+    }
+    .home_aboutme,
+    .btn {
+        position: static;
+        transform: none;
+        margin: 1rem auto 1rem auto;
+        text-align: center;
+    }
+    
+    .btn {
+        justify-content: center;
+    }
+    
+    .prb1 {
+        position: static;
+        transform: none;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    .prb2 {
+        position: static;
+        transform: none;
+        margin: -2.5rem auto;
+        text-align: center;
+    }
+    
+}

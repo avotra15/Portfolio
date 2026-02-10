@@ -1,0 +1,39 @@
+<section id="home">
+  <div class="home">
+      <div class="home_card">
+          <a href="http://https://github.com/avotra15"><img [src]="'/assets/icones/github.png'" alt="github"></a>
+          <a href="http://https://linkedin.com/in/stanislas-avotra/"><img [src]="'/assets/icones/linkedin.png'" alt="linkedin"></a>
+          <img [src]="'/assets/images/profil.png'" alt="profil">
+      </div>
+
+      <div class="home_aboutme">
+          <div class="home_aboutme-nom"><h3 class="stan">Stanislas </h3>développeur passionné, spécialisé dans la création d’applications modernes et performantes.</div>
+
+          <div class="home_aboutme-text">Des solutions rapides, responsives et créatives, alliant technologie et design.</div>
+      </div>
+
+      <div class="btn">
+          <button class="view" (click)="openPdf()" ><img [src]="'/assets/icones/doc.png'" alt="doc">View CV</button>
+          <button class="contact" routerLink="/" fragment="contact">Contact Me</button>
+      </div>
+
+      <div class="prb1">With great power comes... a merge conflict.</div>
+      <div class="prb2">- Mr. Stanislas</div>
+  </div>
+</section>
+
+<section id="work">
+  <app-work></app-work>
+</section>
+
+<section id="skills">
+  <app-skills></app-skills>
+</section>
+
+<section id="aboutme">
+  <app-aboutme></app-aboutme>
+</section>
+
+<section id="contact">
+  <app-contact></app-contact>
+</section>

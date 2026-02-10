@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:  #706F6F;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+
+section {
+    scroll-margin-top: 80px; /* pour navbar fixe */
+    padding-top: 80px; /* ajustez selon la hauteur de votre navbar */
+}
