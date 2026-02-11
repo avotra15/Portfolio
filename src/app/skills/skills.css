@@ -92,19 +92,19 @@
         padding: 15px;
     }
 }
-/*
+
 @media (max-width: 768px) {
     .skills {
-        gap: 25px;
+        gap: 40px;
         padding: 30px 15px;
         justify-content: center;
+        align-items: center;
         max-width: 100%;
-        margin: 0 auto;
     }
     
     .skills img {
-        width: 60px;
-        height: 60px;
-        padding: 12px;
+        width: 100px;
+        height: 100px;
+        padding: 0px;
     }
-}*/
+}
