@@ -410,3 +410,74 @@
         height: 48px;
     }
 }
+/*
+@media (max-width: 768px) {
+    .projets {
+        justify-content: center;
+        padding: 30px 15px;
+    }
+
+    .projet1 {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        padding: 1.5rem 0;
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    .projet1-titre {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+    }
+    
+    .projet1-img {
+        width: calc(100% - 2rem);
+        height: 160px;
+        margin: 0 1rem 1rem 1rem;
+    }
+    
+    .projet1-desc,
+    .projet1-techno {
+        padding: 0 1.5rem;
+    }
+    
+    .projet1-desc {
+        font-size: 0.85rem;
+    }
+    
+    .projet1-btn {
+        margin: 0 1.5rem 0 auto;
+        padding: 0.7rem 2rem;
+        font-size: 0.85rem;
+    }
+    
+    .projet1-techno img {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Modal responsive 
+    .modal-container {
+        padding: 1.5rem;
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .modal-titre {
+        font-size: 1.5rem;
+    }
+
+    .modal-image {
+        height: 200px;
+    }
+
+    .modal-description {
+        font-size: 0.95rem;
+    }
+
+    .modal-technologies img {
+        width: 42px;
+        height: 42px;
+    }
+}
+*/
