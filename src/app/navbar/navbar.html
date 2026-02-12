@@ -1,7 +1,15 @@
     <nav class="navbar">
-        <a routerLink="/" fragment="home">home</a>
-        <a routerLink="/" fragment="work">work</a>
-        <a routerLink="/" fragment="skills">skills</a>
-        <a routerLink="/" fragment="aboutme">about me</a>
-        <a routerLink="/" fragment="contact">contact</a>
+       <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+    
+      <div class="nav-links" [class.active]="isMenuOpen">
+          <a routerLink="/" fragment="home" (click)="closeMenu()">home</a>
+          <a routerLink="/" fragment="work" (click)="closeMenu()">work</a>
+          <a routerLink="/" fragment="skills" (click)="closeMenu()">skills</a>
+          <a routerLink="/" fragment="aboutme" (click)="closeMenu()">about me</a>
+          <a routerLink="/" fragment="contact" (click)="closeMenu()">contact</a>
+      </div>
     </nav>
