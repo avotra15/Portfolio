@@ -348,9 +348,11 @@
 }
 
 @media (max-width: 1024px) {
-    .projets {
+     .projets {
         justify-content: center;
         padding: 40px 20px;
+        max-height: none; /* enlever la limite de hauteur */
+        min-height: auto; /* hauteur automatique */
     }
 
     .projet1 {
@@ -410,18 +412,20 @@
         height: 48px;
     }
 }
+
 @media (max-width: 768px) {
     .projets {
         padding: 20px 15px;
         gap: 1.5rem;
         justify-content: center;
+        max-height: none; /* enlever la limite de hauteur */
+        min-height: auto; /* hauteur automatique */
     }
 
     .projet1 {
         width: 100%;
         max-width: 100%;
         height: auto;
-        padding: 1.5rem 0;
         margin: 0 0 1.5rem 0;
     }
 
@@ -459,43 +463,5 @@
         padding: 0.75rem 2rem;
         font-size: 0.9rem;
         margin: 0 1.5rem 0 auto;
-    }
-
-    /* Modal responsive */
-    .modal-container {
-        padding: 1.5rem;
-        width: 95%;
-        max-height: 90vh;
-    }
-
-    .modal-titre {
-        font-size: 1.6rem;
-    }
-
-    .modal-close {
-        width: 36px;
-        height: 36px;
-        font-size: 1.3rem;
-    }
-
-    .modal-image {
-        height: 220px;
-        margin-bottom: 1.5rem;
-    }
-
-    .modal-description {
-        font-size: 0.95rem;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-    }
-
-    .modal-technologies {
-        gap: 1rem;
-    }
-
-    .modal-technologies img {
-        width: 44px;
-        height: 44px;
-        padding: 10px;
     }
 }

@@ -247,16 +247,16 @@
         padding-bottom: 0.8rem;
     }
 }
-/*
+
 @media (max-width: 1024px) {
     .home_card {
-        margin: 0 auto;
         transform: none;
+        margin: 0 auto 0 auto;
     }
     
     .home_card {
-        width: 400px;
-        height: 200px;
+        width: 500px;
+        height: 250px;
     }
 
     .home_aboutme-text {
@@ -269,7 +269,7 @@
     .btn {
         position: static;
         transform: none;
-        margin: 1rem auto 1rem auto;
+        margin: 1rem auto;
         text-align: center;
     }
     
@@ -280,7 +280,7 @@
     .prb1 {
         position: static;
         transform: none;
-        margin: 4rem auto;
+        margin: 1rem auto;
         text-align: center;
         padding: 1rem 2rem;
     }
@@ -288,12 +288,12 @@
     .prb2 {
         position: static;
         transform: none;
-        margin: -5rem auto;
+        margin: -2rem auto;
         text-align: center;
     }
     
 }
-*/
+
 @media (max-width: 768px) {
     .home_card {
         margin: 0 auto;

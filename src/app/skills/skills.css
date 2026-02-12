@@ -83,23 +83,9 @@
         padding: 40px 20px;
         justify-content: center;
         max-width: 800px;
-        margin: 60rem auto auto auto;
-    }
-    
-    .skills img {
-        width: 70px;
-        height: 70px;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .skills {
-        gap: 40px;
-        padding: 30px 15px;
-        justify-content: center;
-        align-items: center;
-        max-width: 100%;
+        margin: 5rem auto;
+        max-height: none; /* enlever la limite de hauteur */
+        min-height: auto;
     }
     
     .skills img {
@@ -107,4 +93,22 @@
         height: 100px;
         padding: 0px;
     }
+}
+
+@media (max-width: 768px) {
+.skills {
+        gap: 28px;
+        padding: 100px 100px;
+        justify-content: center;
+        align-items: center;
+        /*max-width: 100%;*/
+        min-height: auto;
+    }
+    
+.skills img {
+        width: 70px;
+        height: 70px;
+        padding: 0px;
+    }
+    
 }
