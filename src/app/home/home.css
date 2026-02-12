@@ -234,14 +234,14 @@
     }
 
     .prb1 {
-        bottom: 8.5rem;
+        bottom: 5.5rem;
         padding: 1rem 2.5rem;
         font-size: 0.85rem;
         padding-bottom: 1.8rem;
     }
 
     .prb2 {
-        bottom: 8rem;
+        bottom: 5.5rem;
         right: calc(50% - 165px);
         font-size: 0.8rem;
         padding-bottom: 0.8rem;
