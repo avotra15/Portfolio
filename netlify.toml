@@ -1,3 +1,7 @@
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/nom-de-ton-projet"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
