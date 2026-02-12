@@ -348,9 +348,11 @@
 }
 
 @media (max-width: 1024px) {
-    .projets {
+     .projets {
         justify-content: center;
         padding: 40px 20px;
+        max-height: none; /* enlever la limite de hauteur */
+        min-height: auto; /* hauteur automatique */
     }
 
     .projet1 {
@@ -408,5 +410,58 @@
     .modal-technologies img {
         width: 48px;
         height: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projets {
+        padding: 20px 15px;
+        gap: 1.5rem;
+        justify-content: center;
+        max-height: none; /* enlever la limite de hauteur */
+        min-height: auto; /* hauteur automatique */
+    }
+
+    .projet1 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .projet1-titre {
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .projet1-img {
+        width: calc(100% - 2rem);
+        height: 220px;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .projet1-desc {
+        font-size: 0.95rem;
+        padding: 0 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .projet1-techno {
+        padding: 0 1.5rem;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .projet1-techno img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .projet1-btn {
+        padding: 0.75rem 2rem;
+        font-size: 0.9rem;
+        margin: 0 1.5rem 0 auto;
     }
 }
