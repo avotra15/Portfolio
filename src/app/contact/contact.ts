@@ -14,8 +14,13 @@ export class Contact {
   nom = '';
   email = '';
   message = '';
+  private http: inject(HttpClient);
+  private router: inject(Router); 
 
-  constructor(private http: HttpClient, private router: Router ) { }
+  constructor(
+    private http: HttpClient, 
+    private router: Router 
+  ) { }
 
   onSubmit(): void {
     // Logique de traitement du formulair
