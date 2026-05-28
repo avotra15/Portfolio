@@ -14,8 +14,8 @@ export class Contact {
   nom = '';
   email = '';
   message = '';
-  private http: inject(HttpClient);
-  private router: inject(Router); 
+  private http = inject(HttpClient);
+  private router = inject(Router); 
 
   constructor(
     private http: HttpClient, 
