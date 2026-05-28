@@ -20,9 +20,9 @@ export class Contact {
   onSubmit(): void {
     // Logique de traitement du formulair
     const body = {
-        nom: this.nom,
-        email: this.email,
-        message: this.message
+        nm: this.nom,
+        mail: this.email,
+        msg: this.message
       };
 
   const headers = new HttpHeaders({'Content-Type': 'application/json'});
