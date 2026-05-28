@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
   standalone: true,
 })
 export class Contact {
-  nom: string = '';
-  email: string = '';
-  message: string = '';
+  nom = '';
+  email = '';
+  message = '';
 
   constructor(private http: HttpClient, private router: Router ) { }
 
