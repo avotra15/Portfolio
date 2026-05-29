@@ -1,5 +1,5 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpErrorResponse  } from '@angular/common/http';
+import { Component, inject  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -33,7 +33,7 @@ export class Contact {
         console.log('Message envoyé avec succès', res);
         this.router.navigate(['/home']);
       },
-      error: err => {
+      error: (err: HttpErrorResponse) => {
         console.error('Erreur lors de l\'envoi du message', err);
       },
     });
