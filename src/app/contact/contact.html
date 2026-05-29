@@ -1,4 +1,4 @@
-<div class="contact"> 
+<div class="contact">
     <div class="contact-wrapper">
         <!-- Colonne gauche : informations -->
         <div class="contact-info">
@@ -22,22 +22,22 @@
                 </a>
             </div>
         </div>
-        
+
         <!-- Colonne droite : formulaire -->
-        <form class="contact-form">
+        <form class="contact-form" #contactForm="ngForm" ngSubmit="onSubmit()">
             <label for="nom">Nom</label>
-            <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" required>
+            <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" [(ngModel)]="this.nom" required>
 
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Entrez votre adresse email" required>
+            <input type="email" name="email" id="email" placeholder="Entrez votre adresse email" [(ngModel)]="this.email" required>
 
             <label for="message">Message</label>
-            <textarea name="message" id="message" placeholder="Entrez votre message" required></textarea>
-            
+            <textarea name="message" id="message" placeholder="Entrez votre message" [(ngModel)]="this.message" required></textarea>
+
             <button type="submit">Envoyer</button>
         </form>
     </div>
-    
+
     <div class="contact-copyright">
         <div class="contact-icons">
              <a href="http://https://github.com/avotra15"><img [src]="'/assets/icones/github.png'" alt="github"></a>
