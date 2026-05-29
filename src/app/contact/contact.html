@@ -26,10 +26,10 @@
         <!-- Colonne droite : formulaire -->
         <form class="contact-form" #contactForm="ngForm" ngSubmit="onSubmit()">
             <label for="nom">Nom</label>
-            <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" [(ngModel)]="contact.nom" required>
+            <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" [(ngModel)]="this.nom" required>
 
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Entrez votre adresse email" [(ngModel)]="contact.email" required>
+            <input type="email" name="email" id="email" placeholder="Entrez votre adresse email" [(ngModel)]="this.email" required>
 
             <label for="message">Message</label>
             <textarea name="message" id="message" placeholder="Entrez votre message" [(ngModel)]="this.message" required></textarea>
