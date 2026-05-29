@@ -21,7 +21,7 @@
     transform: translateY(-2px);
     cursor: pointer;
 }
-..nav-links {
+.nav-links {
     display: flex;
     gap: 2rem;
 }
