@@ -13,7 +13,7 @@ final class ContactController extends AbstractController
 {
     public function __construct(private readonly ContactService $contactService) {}
     
-    #[Route('/contact', name: 'app_contact')]
+    #[Route('/api/contact', name: 'app_contact')]
     public function index(Request $request): JsonResponse
     {
         $dto = new ContactDTO();
