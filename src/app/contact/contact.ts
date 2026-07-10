@@ -1,3 +1,4 @@
+
 import { HttpClient, HttpHeaders, HttpErrorResponse  } from '@angular/common/http';
 import { Component, inject  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,11 +12,12 @@ import { Router } from '@angular/router';
   standalone: true,
 })
 export class Contact {
+
   nom = '';
   email = '';
   message = '';
   private http = inject(HttpClient);
-  private router = inject(Router); 
+  private router = inject(Router);
 
   onSubmit(): void {
     // Logique de traitement du formulair
@@ -33,10 +35,10 @@ export class Contact {
         console.log('Message envoyé avec succès', res);
         this.router.navigate(['/home']);
       },
+
       error: (err: HttpErrorResponse) => {
         console.error('Erreur lors de l\'envoi du message', err);
       },
     });
   }
 }
-
