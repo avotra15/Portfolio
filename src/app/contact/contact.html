@@ -24,7 +24,7 @@
         </div>
 
         <!-- Colonne droite : formulaire -->
-        <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit()">
+        <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" [(ngModel)]="nom" required>
             <label for="email">Email</label>
@@ -35,8 +35,12 @@
                 {{ isLoading ? 'Envoi...' : 'Envoyer' }}
             </button>
 
-            <p *ngIf="succes" class="msg-succes">✓ Message envoyé avec succès !</p>
-            <p *ngIf="erreur" class="msg-erreur">✗ Une erreur est survenue. Réessayez.</p>
+            @if (succes) {
+              <p class="msg-succes">Message envoyé avec succès !</p>
+            }
+            @if (erreur) {
+              <p class="msg-erreur">Une erreur est survenue. Réessayez.</p>
+            }
         </form>
     </div>
 

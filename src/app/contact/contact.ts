@@ -1,11 +1,12 @@
 
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component  } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
   standalone: true,
@@ -24,8 +25,8 @@ export class Contact {
 
   constructor(private http: HttpClient) {}
 
-  onSubmit() {
-    if (!this.nom || !this.email || !this.message) {
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
       return;
     }
 
@@ -47,7 +48,7 @@ export class Contact {
       next: () => {
         this.succes = true;
         this.isLoading = false;
-        this.resetForm();
+        this.resetForm(form);
       },
       error: () => {
         this.erreur = true;
@@ -56,9 +57,7 @@ export class Contact {
     });
   }
 
-  private resetForm() {
-    this.nom = '';
-    this.email = '';
-    this.message = '';
+  private resetForm(form: NgForm): void {
+    form.resetForm(); // réinitialise aussi ng-touched, ng-dirty, etc.
   }
 }
