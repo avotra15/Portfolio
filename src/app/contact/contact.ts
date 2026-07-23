@@ -1,7 +1,7 @@
 
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component  } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
 })
 export class Contact {
+  private http = inject(HttpClient);
+
 
   nom = '';
   email = '';
@@ -22,8 +24,6 @@ export class Contact {
   erreur = false;
 
   private readonly formspreeUrl = 'https://formspree.io/f/xzdndwqe';
-
-  constructor(private http: HttpClient) {}
 
   onSubmit(form: NgForm) {
     if (form.invalid) {
