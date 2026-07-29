@@ -12,10 +12,101 @@ body {
     background:  #706F6F;
     overflow-x: hidden;
     overflow-y: auto;
-    
+
 }
 
 section {
     scroll-margin-top: 80px; /* pour navbar fixe */
     padding-top: 80px; /* ajustez selon la hauteur de votre navbar */
+}
+
+
+/* ===== Style commun ===== */
+.toast_alert .p-toast-message {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 4px;
+}
+
+.toast_alert .p-toast-message-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 14px;
+  gap: 10px;
+}
+
+.toast_alert .p-toast-message-icon {
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.toast_alert .p-toast-summary {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.toast_alert .p-toast-detail {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.toast_alert .p-toast-icon-close {
+  margin-left: auto;
+}
+
+/* ===== Variante SUCCESS (par défaut, vert) ===== */
+.toast_alert .p-toast-message-success {
+  background-color: #f0faf1;
+  border: 1px solid #d3ecd6;
+  border-left: 4px solid #22c55e;
+}
+
+.toast_alert .p-toast-message-success .p-toast-message-icon {
+  color: #22c55e;
+}
+
+.toast_alert .p-toast-message-success .p-toast-summary {
+  color: #14532d;
+}
+
+.toast_alert .p-toast-message-success .p-toast-detail {
+  color: #3f6b4a;
+}
+
+.toast_alert .p-toast-message-success .p-toast-icon-close {
+  color: #6b8f75;
+}
+
+.toast_alert .p-toast-message-success .p-toast-icon-close:hover {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+/* ===== Variante ERROR (rouge) ===== */
+.toast_alert .p-toast-message-error {
+  background-color: #fef2f2;
+  border: 1px solid #f5c6c6;
+  border-left: 4px solid #ef4444;
+}
+
+.toast_alert .p-toast-message-error .p-toast-message-icon {
+  color: #ef4444;
+}
+
+.toast_alert .p-toast-message-error .p-toast-summary {
+  color: #7f1d1d;
+}
+
+.toast_alert .p-toast-message-error .p-toast-detail {
+  color: #a94442;
+}
+
+.toast_alert .p-toast-message-error .p-toast-icon-close {
+  color: #c07f7f;
+}
+
+.toast_alert .p-toast-message-error .p-toast-icon-close:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
 }
