@@ -1,4 +1,7 @@
+
+
 <div class="contact">
+  <p-toast class="toast_alert"></p-toast>
     <div class="contact-wrapper">
         <!-- Colonne gauche : informations -->
         <div class="contact-info">
@@ -31,16 +34,10 @@
             <input type="email" name="email" id="email" placeholder="Entrez votre adresse email" [(ngModel)]="email" required>
             <label for="message">Message</label>
             <textarea name="message" id="message" placeholder="Entrez votre message" [(ngModel)]="message" required></textarea>
-            <button type="submit" [disabled]="isLoading">
+            <button type="submit" [disabled]="isLoading" (click)="isLoading = true">
                 {{ isLoading ? 'Envoi...' : 'Envoyer' }}
             </button>
 
-            @if (succes) {
-              <p class="msg-succes">Message envoyé avec succès !</p>
-            }
-            @if (erreur) {
-              <p class="msg-erreur">Une erreur est survenue. Réessayez.</p>
-            }
         </form>
     </div>
 
