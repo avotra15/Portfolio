@@ -1,12 +1,16 @@
 <div class="chat-widget">
   <!-- Bouton flottant pour ouvrir/fermer le chat -->
   <button class="chat-toggle-btn" (click)="toggleChat()">
-    <span *ngIf="!isOpen">💬</span>
-    <span *ngIf="isOpen">✖</span>
+      @if (!isOpen) {
+        <span><img src="/assets/icones/gemini.png" alt="gemini"></span>
+      } @else {
+        <span><img src="/assets/icones/gemini.png" alt="gemini"></span>
+      }
   </button>
 
   <!-- Fenêtre du chat -->
-  <div class="chat-window" *ngIf="isOpen">
+  @if (!isOpen) {
+  <div class="chat-window">
     <div class="chat-header">
       <span>Assistant IA</span>
       <button class="close-btn" (click)="toggleChat()">✖</button>
@@ -31,5 +35,5 @@
       />
       <button (click)="sendMessage(userInput); userInput = ''">Envoyer</button>
     </div>
-  </div>
 </div>
+  }

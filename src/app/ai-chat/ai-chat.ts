@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';import { catchError, throwError, timeout } from 'rxjs';
+;
 
 @Component({
   selector: 'app-ai-chat',
@@ -14,7 +15,7 @@ export class AiChat {
   messages: { sender: string; text: string }[] = [];
   userInput: string = '';
 
-  constructor(private httpClient: HttpClient) {}
+  private httpClient = inject(HttpClient);
 
   toggleChat() {
     this.isOpen = !this.isOpen;
@@ -30,10 +31,6 @@ export class AiChat {
   getChatResponse(message: string) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    /*interface ChatResponse {
-      response: string;
-    }*/
-
     this.httpClient
       .post<any>('http://127.0.0.1:8000/chat', { message }, { headers })
       .subscribe({
@@ -42,7 +39,7 @@ export class AiChat {
         },
         error: (error: any) => {
           console.error('Error occurred:', error);
-        }
+        },
       });
     }
 }
