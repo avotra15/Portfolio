@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';import { catchError, throwError, timeout } from 'rxjs';
+import { CommonModule } from '@angular/common';
 ;
 
 @Component({
