@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-;
 
 @Component({
   selector: 'app-ai-chat',
@@ -15,7 +14,7 @@ export class AiChat {
   messages: { sender: string; text: string }[] = [];
   userInput: string = '';
 
-  private httpClient = inject(HttpClient);
+  private httpClient = inject (HttpClient);
 
   toggleChat() {
     this.isOpen = !this.isOpen;
