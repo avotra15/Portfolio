@@ -1,0 +1,35 @@
+<div class="chat-widget">
+  <!-- Bouton flottant pour ouvrir/fermer le chat -->
+  <button class="chat-toggle-btn" (click)="toggleChat()">
+    <span *ngIf="!isOpen">💬</span>
+    <span *ngIf="isOpen">✖</span>
+  </button>
+
+  <!-- Fenêtre du chat -->
+  <div class="chat-window" *ngIf="isOpen">
+    <div class="chat-header">
+      <span>Assistant IA</span>
+      <button class="close-btn" (click)="toggleChat()">✖</button>
+    </div>
+
+    <div class="chat-messages">
+      <div
+        *ngFor="let msg of messages"
+        class="message"
+        [ngClass]="msg.sender === 'user' ? 'message-user' : 'message-ai'"
+      >
+        {{ msg.text }}
+      </div>
+    </div>
+
+    <div class="chat-input"> 
+      <input
+        type="text"
+        [(ngModel)]="userInput"
+        placeholder="Écrivez votre message..."
+        (keyup.enter)="sendMessage(userInput); userInput = ''"
+      />
+      <button (click)="sendMessage(userInput); userInput = ''">Envoyer</button>
+    </div>
+  </div>
+</div>
