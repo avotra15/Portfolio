@@ -1,5 +1,5 @@
 import { Component, inject, Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -45,7 +45,7 @@ export class AiChat {
         next: (response) => {
           this.messages.push({ sender: 'ai', text: response.response });
         },
-        error: (error: any) => {
+        error: (error: HttpErrorResponse) => {
           console.error('Error occurred:', error);
         },
       });
