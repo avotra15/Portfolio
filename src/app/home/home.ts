@@ -14,9 +14,10 @@ import { Contact } from "../contact/contact";
 })
 export class Home {
   openPdf() {
-    const link = document.createElement('a');
-    link.href = 'assets/CV_Stanislas.pdf';
-    link.download = 'CV_Stanislas.pdf';
-    link.click();
+      const link = document.createElement('a');
+      link.href = 'assets/CV_Stanislas.pdf';
+      link.download = 'CV_Stanislas_DEV.pdf';
+      link.click();
+  }
 }
-}
+
