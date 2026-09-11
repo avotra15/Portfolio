@@ -17,13 +17,11 @@
     </div>
 
     <div class="chat-messages">
-      <div
-        *ngFor="let msg of messages"
-        class="message"
-        [ngClass]="msg.sender === 'user' ? 'message-user' : 'message-ai'"
-      >
-        {{ msg.text }}
+      @for (message of messages; track message) {
+      <div class="message" [ngClass]="message.sender === 'user' ? 'message-user' : 'message-ai'">
+        {{ message.text }}
       </div>
+    }
     </div>
 
     <div class="chat-input"> 

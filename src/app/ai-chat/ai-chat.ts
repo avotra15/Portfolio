@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './ai-chat.css',
 })
 export class AiChat {
-  isOpen: boolean = false;
+  isOpen = false;
   messages: { sender: string; text: string }[] = [];
-  userInput: string = '';
+  userInput = '';
 
   private httpClient = inject (HttpClient);
 
