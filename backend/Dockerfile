@@ -21,8 +21,12 @@ WORKDIR /var/www/html
 COPY . .
 
 ENV APP_ENV=prod
-RUN composer install --no-dev --optimize-autoloader --no-scripts \
-    && php bin/console cache:clear \
-    && chown -R www-data:www-data var
+# Valeurs factices, uniquement pour le build (les vraies viennent de Render au démarrage)
+ENV APP_SECRET=build_secret_temporaire
+ENV DATABASE_URL="postgresql://user:pass@localhost:5432/db?serverVersion=16&charset=utf8"
+
+RUN composer install --no-dev --optimize-autoloader --no-scripts
+RUN php bin/console cache:clear --no-warmup
+RUN chown -R www-data:www-data var
 
 EXPOSE 10000
