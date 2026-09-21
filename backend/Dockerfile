@@ -34,9 +34,4 @@ ENV APP_SECRET=build_secret_temporaire
 ENV DATABASE_URL=postgresql://user:pass@localhost:5432/db?serverVersion=16
 
 RUN composer install --no-dev --optimize-autoloader --no-scripts
-
-RUN php bin/console cache:clear --no-warmup
-
-RUN chown -R www-data:www-data var
-
-EXPOSE 10000
+RUN mkdir -p var/cache var/log && chown -R www-data:www-data var
