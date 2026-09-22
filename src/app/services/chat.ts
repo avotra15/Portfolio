@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 
 export interface ChatResponse {
@@ -12,7 +13,7 @@ export interface ChatResponse {
 export class Chat {
   private http = inject(HttpClient);
 
-  private apiUrl = 'http://127.0.0.1:8000/chat';
+  private apiUrl = `${environment.apiUrl}/chat`;
 
   sendMessage(message: string): Observable<ChatResponse> {
     const payload = { message };
