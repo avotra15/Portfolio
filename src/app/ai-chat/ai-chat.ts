@@ -2,6 +2,7 @@ import { Component, inject, Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-ai-chat',
@@ -40,7 +41,7 @@ export class AiChat {
       }
 
     this.httpClient
-      .post<ChatResponse>('http://127.0.0.1:8000/chat', { message }, { headers })
+      .post<ChatResponse>(`${environment.apiUrl}/chat`, { message }, { headers })
       .subscribe({
         next: (response) => {
           this.messages.push({ sender: 'ai', text: response.response });
