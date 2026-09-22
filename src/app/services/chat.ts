@@ -13,7 +13,7 @@ export interface ChatResponse {
 export class Chat {
   private http = inject(HttpClient);
 
-  private apiUrl = `${environment.apiUrl}`;
+  private apiUrl = `${environment.apiUrl}/chat`;
 
   sendMessage(message: string): Observable<ChatResponse> {
     const payload = { message };
