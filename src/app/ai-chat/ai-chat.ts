@@ -41,7 +41,7 @@ export class AiChat {
       }
 
     this.httpClient
-      .post<ChatResponse>(`${environment.apiUrl}/chat`, { message }, { headers })
+      .post<ChatResponse>(`${environment.apiUrl}`, { message }, { headers })
       .subscribe({
         next: (response) => {
           this.messages.push({ sender: 'ai', text: response.response });
