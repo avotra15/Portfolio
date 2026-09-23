@@ -17,9 +17,18 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
     /etc/apache2/apache2.conf \
     /etc/apache2/conf-available/*.conf
 
+# --- AJOUT : autorise .htaccess dans public/ ---
+RUN { \
+    echo '<Directory /var/www/html/public>'; \
+    echo '    AllowOverride All'; \
+    echo '    Require all granted'; \
+    echo '</Directory>'; \
+    } > /etc/apache2/conf-available/symfony.conf \
+    && a2enconf symfony
+
 ENV PORT=10000
 
-RUN sed -i 's/80/${PORT}/g' \
+RUN sed -i "s/80/\${PORT}/g" \
     /etc/apache2/sites-available/000-default.conf \
     /etc/apache2/ports.conf
 
