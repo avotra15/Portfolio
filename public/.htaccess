@@ -1,0 +1,13 @@
+# public/.htaccess
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si le fichier/dossier demandé existe, on le laisse
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Sinon on envoie tout vers index.php
+    RewriteRule ^ index.php [L]
+</IfModule>
