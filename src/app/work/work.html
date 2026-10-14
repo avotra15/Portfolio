@@ -1,87 +1,37 @@
 <div class="projets">
-    <div class="projet1">
-        <div class="projet1-titre">Rent_Car</div>
+    <div class="projet1" *ngFor="let projet of projets">
+        <div class="projet1-titre">{{ projet.titre }}</div>
 
         <div class="projet1-img">
-            <img [src]="'/assets/images/rent_car.png'" alt="portfolio">
+            <img [src]="projet.image" alt="portfolio">
         </div>
         <div class="projet1-desc">
-            Notre plateforme révolutionne la manière de louer et acheter des véhicules en offrant une expérience simple, rapide et 100% digitale. Elle connecte en un seul endroit les agences, les vendeurs et les clients, facilitant ainsi chaque étape du processus, de la recherche à la transaction.
-                Grâce à une interface intuitive et des outils de recherche avancés, les utilisateurs peuvent trouver en quelques clics le véhicule qui correspond parfaitement à leurs besoins et à leur budget. Les agences et vendeurs bénéficient, quant à eux, d’une visibilité accrue et d’un espace dédié pour gérer efficacement leurs annonces et leurs réservations.
-                Pensée pour répondre aux exigences du marché moderne, la plateforme mise sur la rapidité, la transparence et la sécurité pour offrir une solution fiable et accessible à tous.
-                Objectif : simplifier l’accès aux services automobiles tout en digitalisant un secteur encore peu optimisé dans de nombreux marchés.
+            {{ projet.description }}
         </div>
         
 
         <div class="projet1-techno">
-            <img src="/assets/icones/javascript.png" alt="javascript">
-            <img src="/assets/icones/symfony.png" alt="symfony">
-            <img src="/assets/icones/postgrey.png" alt="postgresql">
+            <img *ngFor="let t of projet.technos" [src]="t.icone" [alt]="t.alt">
         </div>
-        <button class="projet1-btn">Voir plus</button>
+        <button class="projet1-btn" (click)="selectionnerProjet(projet)">Voir plus</button>
     </div>
 
-    <div class="projet1">
-        <div class="projet1-titre">TaskFlow Pro</div>
+    <!-- Modal unique plein page -->
+    <div class="modal" *ngIf="projetSelectionne">
+    <div class="modal-contenu">
+        <button class="modal-fermer" (click)="fermerModal()" aria-label="Fermer">&times;</button>
 
-        <div class="projet1-img">
-            <img [src]="'/assets/images/taskflow_pro.png'" alt="portfolio">
+        <h2 class="modal-titre">{{ projetSelectionne.titre }}</h2>
+
+        <img class="modal-img" [src]="projetSelectionne.image" [alt]="projetSelectionne.titre">
+
+        <p class="modal-desc">{{ projetSelectionne.description }}</p>
+
+        <div class="modal-techno">
+        <img *ngFor="let t of projetSelectionne.technos" [src]="t.icone" [alt]="t.alt">
         </div>
-        <div class="projet1-desc">
-            Description pour présentation commerciale
-            Transformez la gestion de vos projets d'entreprise
-            TaskFlow Pro est la solution de gestion de projet nouvelle génération qui révolutionne la façon dont vos équipes collaborent et atteignent leurs objectifs.
-            Le défi
-            Dans un environnement professionnel en constante évolution, les équipes perdent un temps précieux à coordonner leurs tâches, à rechercher l'information dispersée et à suivre manuellement l'avancement des projets.
-            Notre solution
-            TaskFlow Pro offre une plateforme unifiée où chaque membre de votre équipe peut visualiser, gérer et faire progresser ses tâches en temps réel. Fini les réunions de suivi interminables et les emails sans fin : tout se passe au même endroit, de manière transparente et instantanée.
-            Les bénéfices concrets
-
-            Gain de productivité immédiat : réduisez le temps consacré à la coordination de 40%
-            Visibilité totale : suivez l'avancement de tous vos projets internes en un coup d'œil
-            Responsabilisation des équipes : chacun sait exactement ce qu'il doit faire et quand
-            Prise de décision éclairée : des données en temps réel pour piloter efficacement vos projets
-
-        </div>
-
-        <div class="projet1-techno">
-            <img src="/assets/icones/javascript.png" alt="javascript">
-            <img src="/assets/icones/angular.png" alt="angular">
-            <img src="/assets/icones/symfony.png" alt="symfony">
-            <img src="/assets/icones/mysql.png" alt="mysql">
-        </div>
-        <button class="projet1-btn">Voir plus</button>
     </div>
-    
-    <div class="projet1">
-        <div class="projet1-titre">My Portfolio Pro</div>
-
-        <div class="projet1-img">
-            <img [src]="'/assets/images/portfolio.png'" alt="portfolio">
-        </div>
-        <div class="projet1-desc">
-            Ce portfolio constitue ma solution centralisée pour présenter mon expertise professionnelle de manière cohérente et accessible, 
-            éliminant ainsi la dispersion sur de multiples plateformes et offrant à mes interlocuteurs - recruteurs, clients ou partenaires 
-            - un accès instantané à l'ensemble de mes compétences et réalisations.
-
-            En tant que développeur mobile spécialisé, ce projet va au-delà d'une simple vitrine. 
-            Il marque une étape importante dans mon évolution professionnelle en me 
-            permettant de maîtriser le développement web full-stack avec Angular pour le frontend 
-            et Symfony pour le backend, des technologies de référence en entreprise. 
-            Cette montée en compétences est essentielle pour concevoir des écosystèmes applicatifs complets incluant interfaces d'administration robustes 
-            et APIs performantes liées aux projets mobiles.
-
-            Développé avec Angular, framework JavaScript entreprise par excellence,
-            et propulsé par Symfony côté serveur pour garantir une architecture solide et scalable, 
-            ce site incarne ma philosophie de développement : allier excellence technique, expérience utilisateur fluide et esthétique professionnelle. 
-            Chaque élément a été optimisé pour offrir une navigation intuitive et mettre en lumière la qualité de mes réalisations de manière mémorable.
-        </div>
-
-        <div class="projet1-techno">
-            <img src="/assets/icones/angular.png" alt="angular">
-            <img src="/assets/icones/symfony.png" alt="symfony">
-            <img src="/assets/icones/postgrey.png" alt="postgresql">
-        </div>
-        <button class="projet1-btn">Voir plus</button>
     </div>
+
+
 </div>
