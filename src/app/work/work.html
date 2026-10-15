@@ -1,5 +1,6 @@
 <div class="projets">
-    <div class="projet1" *ngFor="let projet of projets">
+    @for (projet of projets; track projet.titre) {
+    <div class="projet1">
         <div class="projet1-titre">{{ projet.titre }}</div>
 
         <div class="projet1-img">
@@ -11,13 +12,16 @@
         
 
         <div class="projet1-techno">
-            <img *ngFor="let t of projet.technos" [src]="t.icone" [alt]="t.alt">
+            @for (t of projet.technos; track t.alt) {
+            <img [src]="t.icone" [alt]="t.alt">
+             }
         </div>
         <button class="projet1-btn" (click)="selectionnerProjet(projet)">Voir plus</button>
     </div>
 
     <!-- Modal unique plein page -->
-    <div class="modal" *ngIf="projetSelectionne">
+     @if (projetSelectionne) {
+    <div class="modal">
     <div class="modal-contenu">
         <button class="modal-fermer" (click)="fermerModal()" aria-label="Fermer">&times;</button>
 
@@ -32,6 +36,6 @@
         </div>
     </div>
     </div>
-
-
+     }
+    }
 </div>
