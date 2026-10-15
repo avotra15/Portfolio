@@ -15,7 +15,7 @@ final class ChatController extends AbstractController
     ) {
     }
 
-    #[Route('/chat', name: 'app_chat', methods: ['POST'])]
+    #[Route('/chat', name: 'app_chat', methods: ['POST', 'OPTIONS'])]
     public function chat(
         Request $request
     ): JsonResponse
