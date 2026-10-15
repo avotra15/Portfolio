@@ -291,6 +291,71 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
+
+.modal {
+  position: fixed;
+  inset: 0;               
+  z-index: 1000;
+  background: #706F6F;;   
+  overflow-y: auto;       
+  animation: apparition 0.25s ease;
+}
+
+.modal-contenu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px 40px;
+  position: relative;
+}
+
+.modal-fermer {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #f0f0f0;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1001;
+
+  &:hover { background: #e0e0e0; }
+}
+
+.modal-titre {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-desc {
+  white-space: pre-line; 
+  line-height: 1.7;
+}
+
+.modal-techno {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+
+  img { height: 40px; }
+}
+
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
 /* Responsive */
 
 /* Medium screens */
