@@ -18,24 +18,25 @@
         </div>
         <button class="projet1-btn" (click)="selectionnerProjet(projet)">Voir plus</button>
     </div>
-
+    }
     <!-- Modal unique plein page -->
      @if (projetSelectionne) {
-    <div class="modal">
-    <div class="modal-contenu">
-        <button class="modal-fermer" (click)="fermerModal()" aria-label="Fermer">&times;</button>
+        <div class="modal">
+            <div class="modal-contenu">
+                <button class="modal-fermer" (click)="fermerModal()" aria-label="Fermer">&times;</button>
 
-        <h2 class="modal-titre">{{ projetSelectionne.titre }}</h2>
+                <h2 class="modal-titre">{{ projetSelectionne.titre }}</h2>
 
-        <img class="modal-img" [src]="projetSelectionne.image" [alt]="projetSelectionne.titre">
+                <img class="modal-img" [src]="projetSelectionne.image" [alt]="projetSelectionne.titre">
 
-        <p class="modal-desc">{{ projetSelectionne.description }}</p>
+                <p class="modal-desc">{{ projetSelectionne.description }}</p>
 
-        <div class="modal-techno">
-        <img *ngFor="let t of projetSelectionne.technos" [src]="t.icone" [alt]="t.alt">
+                <div class="modal-techno">
+                    @for (t of projetSelectionne.technos; track t.alt) {
+                    <img [src]="t.icone" [alt]="t.alt"> 
+                    }
+            </div>
         </div>
     </div>
-    </div>
-     }
     }
 </div>
