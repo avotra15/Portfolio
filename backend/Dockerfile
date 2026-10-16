@@ -40,3 +40,5 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 RUN mkdir -p var/cache var/log && chown -R www-data:www-data var
+
+RUN a2enmod rewrite headers
